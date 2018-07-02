@@ -30,5 +30,5 @@ RUN apk add --no-cache --virtual build-dependencies \
     make && \
     make install && \
     apk del build-dependencies && \
-    rm /etc/ssh/ssh_host_* && cd .. && rm -rf openssh
+    rm /etc/ssh/ssh_host_* && cd .. && rm -rf openssh-portable
 CMD [ "/usr/sbin/sshd", "-D" ]
